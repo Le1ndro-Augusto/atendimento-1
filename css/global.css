@@ -1,0 +1,18 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body section {
+    overflow-x: hidden;
+}
+
+.cor_azul {
+    color: #00003cff;
+}
+
+.cor_amarela {
+    color: #d4ad68ff;
+}
