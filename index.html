@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +11,23 @@
     <link rel="stylesheet" href="css/global.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script>
-        function checkAccess(){
-            if (localStorage.getItem("site_accessado")){
-                document.body.innerHTML = <h1 style="color: red;">Você já acessou esse site antes e não pode acessar novamente!!.</h1>
+        function checkAccess() {
+            // Verifica se o usuário já acessou o site
+            if (localStorage.getItem("alreadyVisited")) {
+                // Se já acessou, redireciona para uma página de aviso
+                document.body.innerHTML = "<h1>Acesso Negado</h1><p>Você já acessou este site uma vez e não pode acessar novamente.</p>";
             } else {
-                localStorage.setItem("site_accessado", "true");
+                // Se ainda não acessou, define o acesso no localStorage
+                localStorage.setItem("alreadyVisited", "true");
             }
+        }
+
+        function toggleMenu() {
+            const menu = document.querySelector('.categoria');
+            menu.classList.toggle('show');
         }
     </script>
 </head>
-
 <body onload="checkAccess()">
     <header>
         <div class="menu">
@@ -76,12 +82,9 @@
 
     <section class="conteudo-1">
         <div class="desc-conteudo-1">
-            <h2>Soluções na palma <br>
-                da sua mão</h2>
+            <h2>Soluções na palma <br> da sua mão</h2>
             <p>Facilite seu dia</p>
-            <p>Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros, que tornem o dia
-                a dia do cliente mais fácil e que estejam acessíveis nos momentos e nos canais que o cliente preferir.
-            </p>
+            <p>Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros, que tornem o dia a dia do cliente mais fácil e que estejam acessíveis nos momentos e nos canais que o cliente preferir.</p>
             <br><br>
             <a href="https://wa.link/dazyfr" class="button-conteudo-1">
                 Solicitar Boleto
@@ -94,8 +97,7 @@
 
     <section class="conteudo-2">
         <div class="conteudo-2-desc">
-            <h2>Facilidades <br>
-                para seu dia a dia</h2>
+            <h2>Facilidades <br> para seu dia a dia</h2>
 
             <div class="cards-conteudo-2">
                 <div class="bloco-conteudo-2">
@@ -146,13 +148,5 @@
     z-index:1000;" target="_blank">
         <i style="margin-top:16px" class="fa fa-whatsapp"></i>
     </a>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.categoria');
-            menu.classList.toggle('show');
-        }
-    </script>
 </body>
-
 </html>
