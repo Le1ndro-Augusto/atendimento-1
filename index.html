@@ -11,9 +11,18 @@
     <link rel="stylesheet" href="css/conteudos.css">
     <link rel="stylesheet" href="css/global.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        function checkAccess(){
+            if (localStorage.getItem("site_accessado")){
+                document.body.innerHTML = <h1 style="color: red;">Você já acessou esse site antes e não pode acessar novamente!!.</h1>
+            } else {
+                localStorage.setItem("site_accessado", "true");
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body onload="checkAccess()">
     <header>
         <div class="menu">
             <a href="https://wa.link/dazyfr" class="logo">Atendimento</a>
