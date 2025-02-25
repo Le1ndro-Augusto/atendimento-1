@@ -10,25 +10,8 @@
     <link rel="stylesheet" href="css/conteudos.css">
     <link rel="stylesheet" href="css/global.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script>
-        function checkAccess() {
-            // Verifica se o usuário já acessou o site
-            if (localStorage.getItem("alreadyVisited")) {
-                // Se já acessou, redireciona para uma página de aviso
-                document.body.innerHTML = "<h1>Acesso Negado</h1><p>Você já acessou este site uma vez e não pode acessar novamente.</p>";
-            } else {
-                // Se ainda não acessou, define o acesso no localStorage
-                localStorage.setItem("alreadyVisited", "true");
-            }
-        }
-
-        function toggleMenu() {
-            const menu = document.querySelector('.categoria');
-            menu.classList.toggle('show');
-        }
-    </script>
 </head>
-<body onload="checkAccess()">
+<body>
     <header>
         <div class="menu">
             <a href="https://wa.link/dazyfr" class="logo">Atendimento</a>
