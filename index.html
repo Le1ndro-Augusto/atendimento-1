@@ -1,16 +1,21 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultoria Ao Cliente</title>
+    <title>Central de Antendimento</title>
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/conteudos.css">
     <link rel="stylesheet" href="css/global.css">
+
+    <link rel="stylesheet" href="css/anima.css">
+    <link rel="stylesheet" href="css/feed.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
     <header>
         <div class="menu">
@@ -31,43 +36,36 @@
             <h1>Emita sua segunda via <br> De um jeito fácil</h1>
             <br>
             <a href="https://wa.link/nkqu2x" class="button-banner">
-                Soliticar 2ª via de boleto
+                Solicitar 2ª via
             </a>
         </div>
     </section>
 
-    <section class="cards">
-        <div class="bloco">
+    <section class="cards fade-in">
+        <a href="https://wa.link/nkqu2x" class="bloco">
             <i class="ph ph-barcode"></i>
-            <h3>Segunda Via De Boleto</h3>
+            <h3>Segunda Via</h3>
             <br>
-            <a href="https://wa.link/nkqu2x" class="button-bloco">
-                Segunda via de boleto
-            </a>
-        </div>
-        <div class="bloco">
+        </a>
+        <a href="https://wa.link/nkqu2x" class="bloco">
             <i class="ph ph-identification-card"></i>
             <h3>Antecipação</h3>
             <br>
-            <a href="https://wa.link/nkqu2x" class="button-bloco">
-                Acessar
-            </a>
-        </div>
-        <div class="bloco">
+        </a>
+        <a href="https://wa.link/nkqu2x" class="bloco">
             <i class="ph ph-cardholder"></i>
             <h3>Liquidação Antecipada</h3>
             <br>
-            <a href="https://wa.link/nkqu2x" class="button-bloco">
-                Liquidação antecipada
-            </a>
-        </div>
+        </a>
     </section>
 
-    <section class="conteudo-1">
+    <section class="conteudo-1 fade-in  ">
         <div class="desc-conteudo-1">
             <h2>Soluções na palma <br> da sua mão</h2>
             <p>Facilite seu dia</p>
-            <p>Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros, que tornem o dia a dia do cliente mais fácil e que estejam acessíveis nos momentos e nos canais que o cliente preferir.</p>
+            <p>Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros, que tornem o dia
+                a dia do cliente mais fácil e que estejam acessíveis nos momentos e nos canais que o cliente preferir.
+            </p>
             <br><br>
             <a href="https://wa.link/nkqu2x" class="button-conteudo-1">
                 Solicitar Boleto
@@ -78,7 +76,7 @@
         </div>
     </section>
 
-    <section class="conteudo-2">
+    <section class="conteudo-2 fade-in  ">
         <div class="conteudo-2-desc">
             <h2>Facilidades <br> para seu dia a dia</h2>
 
@@ -111,7 +109,29 @@
         </div>
     </section>
 
-    <div class="img-main">
+    <section class="feedback-section">
+        <h2>O que nossos clientes dizem</h2>
+        <div class="feedback-container">
+            <div class="feedback-card">
+                <img src="img/download-_1_.png" alt="Cliente 1">
+                <h3>Maria Silva</h3>
+                <p>"Ótimo atendimento! Resolvi meu problema em minutos. Super recomendo!"</p>
+            </div>
+            <div class="feedback-card">
+                <img src="img/download-_3_.png" alt="Cliente 2">
+                <h3>João Santos</h3>
+                <p>"Muito eficiente e fácil de usar. Atendimento excelente!"</p>
+            </div>
+            <div class="feedback-card">
+                <img src="img/cliente3.jpg" alt="Sem Foto">
+                <h3>Ana Oliveira</h3>
+                <p>"Serviço rápido e confiável. Sempre utilizo e nunca tive problemas!"</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="img-main fade-in  ">
         <img src="img/captura-de-tela-2024-01-05-091601-m6LraXPN35fgPK30-768x226.jpg" alt="">
     </div>
 
@@ -127,5 +147,27 @@
     z-index:1000;" target="_blank">
         <i style="margin-top:16px" class="fa fa-whatsapp"></i>
     </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".banner, .cards, .conteudo-1, .conteudo-2, .img-main");
+
+            const fadeInOnScroll = () => {
+                elements.forEach((el) => {
+                    const elementTop = el.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (elementTop < windowHeight - 100) {
+                        el.classList.add("show");
+                    }
+                });
+            };
+
+            window.addEventListener("scroll", fadeInOnScroll);
+            fadeInOnScroll(); // Para ativar os elementos visíveis já no carregamento
+        });
+
+    </script>
 </body>
+
 </html>

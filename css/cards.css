@@ -12,10 +12,13 @@
 
 .cards .bloco {
     width: 100%;
-    background-color: #fff;
+    background-color: #00003cff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 5px #00003cff;
+
+    text-decoration: none;
+    color: #fff;
 }
 
 .bloco i {
@@ -41,8 +44,9 @@
     border-radius: 5px;
 }
 
-.button-bloco:hover {
-    background-color: rgba(0, 0, 60, 0.785);
+.bloco:hover {
+    transform: scale(1.06);
+    transition: .1s;
 }
 
 @media (max-width: 968px) {
