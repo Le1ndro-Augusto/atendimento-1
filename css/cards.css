@@ -1,65 +1,59 @@
+/* Estilos gerais para desktop */
 .cards {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     padding: 20px;
-    position: relative;
-    bottom: 5rem;
+    
+}
+
+.cards-banner {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
+    justify-content: center;
+    width: 100%;
+
+    position: relative;
+    top: -60px;
 }
 
-.cards .bloco {
-    width: 100%;
-    background-color: #00003cff;
+.bloco {
+    background-color: green;
+    text-decoration: none;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #00003cff;
-
-    text-decoration: none;
-    color: #fff;
-}
-
-.bloco i {
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-}
-
-.bloco h3 {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.bloco .button-bloco {
-    display: flex;
-    justify-content: center;
-    background-color: #00003cff;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 80px;
+    border-radius: 6px;
     width: 100%;
-    border-radius: 5px;
+    height: 90px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bloco:hover {
-    transform: scale(1.06);
+    transform: scale(1.10);
     transition: .1s;
 }
 
-@media (max-width: 968px) {
-    .cards {
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px;
-        position: relative;
-        bottom: 0rem;
+/* Estilos específicos para mobile */
+@media (max-width: 768px) {
+    .cards-banner {
         display: flex;
+        align-items: center;
         flex-direction: column;
+    }
+
+    .bloco {
+        height: 50px; /* Ajuste a altura para mobile */
+        display: flex;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+    }
+
+    .bloco:hover {
+        display: none;
     }
 }

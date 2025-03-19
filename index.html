@@ -1,139 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central de Antendimento</title>
-    <link rel="stylesheet" href="css/menu.css">
+    <title>Central de Atendimento</title>
+
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/cards.css">
-    <link rel="stylesheet" href="css/conteudos.css">
-    <link rel="stylesheet" href="css/global.css">
-
-    <link rel="stylesheet" href="css/anima.css">
-    <link rel="stylesheet" href="css/feed.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/sobre.css">
+    <link rel="stylesheet" href="css/conteudo.css">
+    <link rel="stylesheet" href="css/perguntas.css">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </head>
 
 <body>
-    <header>
-        <div class="menu">
-            <a href="https://wa.link/nkqu2x" class="logo">Atendimento</a>
-            <i class="ph ph-list menu-icon" onclick="toggleMenu()"></i>
-            <ul class="categoria">
-                <li><a href="https://wa.link/nkqu2x">Sobre</a></li>
-                <li><a href="https://wa.link/nkqu2x">Serviços</a></li>
-                <li><a href="https://wa.link/nkqu2x">Quem Somos</a></li>
-            </ul>
-            <a href="https://wa.link/nkqu2x" class="log">Fale conosco</a>
+    <header class="home">
+        <div class="container">
+            <a href="#" class="logo">Àrea do cliente</a>
+
+            <!-- Ícone do menu mobile -->
+            <div class="menu-icon" id="menu-toggle">
+                <i class="ph ph-list"></i>
+            </div>
+
+            <nav>
+                <ul class="menu" id="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="https://wa.link/nkqu2x">Contato</a></li>
+                </ul>
+                <a href="https://wa.link/nkqu2x" class="btn-fale">Fale Conosco</a>
+            </nav>
         </div>
     </header>
 
     <section class="banner">
-        <div class="desc-banner">
-            <h3>2 Via De Boleto</h3>
-            <h1>Emita sua segunda via <br> De um jeito fácil</h1>
-            <br>
-            <a href="https://wa.link/nkqu2x" class="button-banner">
-                Solicitar 2ª via
-            </a>
-        </div>
-    </section>
-
-    <section class="cards fade-in">
-        <a href="https://wa.link/nkqu2x" class="bloco">
-            <i class="ph ph-barcode"></i>
-            <h3>Segunda Via</h3>
-            <br>
-        </a>
-        <a href="https://wa.link/nkqu2x" class="bloco">
-            <i class="ph ph-identification-card"></i>
-            <h3>Antecipação</h3>
-            <br>
-        </a>
-        <a href="https://wa.link/nkqu2x" class="bloco">
-            <i class="ph ph-cardholder"></i>
-            <h3>Liquidação Antecipada</h3>
-            <br>
-        </a>
-    </section>
-
-    <section class="conteudo-1 fade-in  ">
-        <div class="desc-conteudo-1">
-            <h2>Soluções na palma <br> da sua mão</h2>
-            <p>Facilite seu dia</p>
-            <p>Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros, que tornem o dia
-                a dia do cliente mais fácil e que estejam acessíveis nos momentos e nos canais que o cliente preferir.
-            </p>
-            <br><br>
-            <a href="https://wa.link/nkqu2x" class="button-conteudo-1">
-                Solicitar Boleto
-            </a>
-        </div>
-        <div class="img-conteudo-1">
-            <img src="img/bonecos.png" alt="">
-        </div>
-    </section>
-
-    <section class="conteudo-2 fade-in  ">
-        <div class="conteudo-2-desc">
-            <h2>Facilidades <br> para seu dia a dia</h2>
-
-            <div class="cards-conteudo-2">
-                <div class="bloco-conteudo-2">
-                    <i class="ph ph-barcode"></i>
-                    <h3>Segunda via de Boleto</h3>
-                    <br>
-                    <a href="#" class="saibamais">Saiba mais -></a>
+        <div class="banner-carrousel">
+            <!-- Banner 1 -->
+            <div class="banner-item active one">
+                <div class="desc-banner one-1">
+                    <h2>Conte com nosso atendimento 24 horas, especializado para solucionar seu problema!</h2>
+                    <p>Segurança e praticidade para emissão de 2ª via de boleto e antecipação.</p>
+                    <div class="button-banner one-1-b">
+                        <a href="https://wa.link/nkqu2x">
+                            Clique aqui e comece sua conversa
+                            <i class="ph ph-arrow-line-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="bloco-conteudo-2">
-                    <i class="ph ph-currency-circle-dollar"></i>
-                    <h3>Consulta saldo devedor</h3>
-                    <br>
-                    <a href="https://wa.link/nkqu2x" class="saibamais">Saiba mais -></a>
-                </div>
-                <div class="bloco-conteudo-2">
-                    <i class="ph ph-calendar-check"></i>
-                    <h3>Antecipada</h3>
-                    <br>
-                    <a href="https://wa.link/nkqu2x" class="saibamais">Saiba mais -></a>
-                </div>
-                <div class="bloco-conteudo-2">
-                    <i class="ph ph-phone-incoming"></i>
-                    <h3>Atendimento On-line</h3>
-                    <br>
-                    <a href="https://wa.link/nkqu2x" class="saibamais">Saiba mais -></a>
+            </div>
+            <!-- Banner 2 -->
+            <div class="banner-item seg">
+                <div class="desc-banner seg-2">
+                    <h2>2ª via de boleto <br> emita sua segunda via de um jeito fácil</h2>
+                    <p>Precisa da segunda via do seu boleto? <br>Agora ficou simples e rápido! Emita sua 2ª via.</p>
+                    <div class="button-banner seg-2-b">
+                        <a href="https://wa.link/nkqu2x">
+                            Solicitar meu atendimento
+                            <i class="ph ph-arrow-line-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Controles do Carrossel -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
+
+    <section class="cards" id="home">
+        <div class="cards-banner">
+            <a href="https://wa.link/nkqu2x" class="bloco">
+                2ª via de boleto
+            </a>
+            <a href="https://wa.link/nkqu2x" class="bloco">
+                liquidação antecipada
+            </a>
+            <a href="https://wa.link/nkqu2x" class="bloco">
+                atualizar boleto vencido
+            </a>
+            <a href="https://wa.link/nkqu2x" class="bloco">
+                antecipar parcelas
+            </a>
+            <a href="https://wa.link/nkqu2x" class="bloco">
+                atendimento online
+            </a>
+        </div>
+    </section>
+
+    <section class="sobre">
+        <div class="sobre-nos">
+            <h3>ATENÇÃO</h3>
+            <h1>Pague seu débito ao credor e não ao fraudador. </h1>
+            <p>Apresentamos algumas dicas para que você não caia em golpes de fraude com boletos falsos. Ao suspeitar ou
+                identificar de um e-mail, uma mensagem ou uma página falsa em nome da SF, não clique em links nem abra
+                ou baixe arquivos, e nos avise enviando uma mensagem para:</p>
+
+            <div class="button-chamada">
+                <a href="https://wa.link/nkqu2x">
+                    Inicar atendiemnto ->
+                </a>
+            </div>
+        </div>
+        <img src="img/pessoa-1.png" alt="">
+    </section>
+
+    <section class="maer">
+        <section class="conteudo-1 fade-in  ">
+            <div class="desc-conteudo-1">
+                <h2>Soluções na palma <br> da sua mão</h2>
+                <p>Facilite seu dia</p>
+                <p>Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros, que tornem o
+                    dia
+                    a dia do cliente mais fácil e que estejam acessíveis nos momentos e nos canais que o cliente
+                    preferir.
+                </p>
+                <br><br>
+                <a href="https://wa.link/nkqu2x" class="button-conteudo-1">
+                    Solicitar Boleto
+                </a>
+            </div>
+            <div class="img-conteudo-1">
+                <img src="img/bonecos.png" alt="">
+            </div>
+        </section>
     </section>
 
     <section class="feedback-section">
         <h2>O que nossos clientes dizem</h2>
         <div class="feedback-container">
             <div class="feedback-card">
-                <img src="img/download-_1_.png" alt="Cliente 1">
                 <h3>Maria Silva</h3>
                 <p>"Ótimo atendimento! Resolvi meu problema em minutos. Super recomendo!"</p>
             </div>
             <div class="feedback-card">
-                <img src="img/download-_3_.png" alt="Cliente 2">
                 <h3>João Santos</h3>
                 <p>"Muito eficiente e fácil de usar. Atendimento excelente!"</p>
             </div>
             <div class="feedback-card">
-                <img src="img/cliente3.jpg" alt="Sem Foto">
                 <h3>Ana Oliveira</h3>
                 <p>"Serviço rápido e confiável. Sempre utilizo e nunca tive problemas!"</p>
             </div>
         </div>
     </section>
 
+    <section class="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <button class="faq-question">O que é a 2ª via de boleto?</button>
+            <div class="faq-answer">
+                <p>A 2ª via de boleto é uma cópia do boleto original que pode ser gerada caso você tenha perdido ou não
+                    tenha recebido o boleto inicial.</p>
+            </div>
+        </div>
 
-    <div class="img-main fade-in  ">
-        <img src="img/captura-de-tela-2024-01-05-091601-m6LraXPN35fgPK30-768x226.jpg" alt="">
-    </div>
+        <div class="faq-item">
+            <button class="faq-question">Como posso antecipar parcelas?</button>
+            <div class="faq-answer">
+                <p>A antecipação de parcelas pode ser feita diretamente no nosso portal, basta selecionar a opção
+                    desejada e seguir as instruções para confirmar o pagamento antecipado.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Quais são as formas de pagamento aceitas?</button>
+            <div class="faq-answer">
+                <p>Aceitamos pagamento via boleto, cartão de crédito e transferência bancária. Escolha a forma mais
+                    conveniente para você.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Como posso entrar em contato com o suporte?</button>
+            <div class="faq-answer">
+                <p>Você pode entrar em contato conosco pelo chat online. Estamos disponíveis 24 horas para
+                    ajudar.</p>
+            </div>
+        </div>
+    </section>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <a href="https://wa.link/nkqu2x" style="position:fixed;
@@ -148,26 +196,10 @@
         <i style="margin-top:16px" class="fa fa-whatsapp"></i>
     </a>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const elements = document.querySelectorAll(".banner, .cards, .conteudo-1, .conteudo-2, .img-main");
-
-            const fadeInOnScroll = () => {
-                elements.forEach((el) => {
-                    const elementTop = el.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-
-                    if (elementTop < windowHeight - 100) {
-                        el.classList.add("show");
-                    }
-                });
-            };
-
-            window.addEventListener("scroll", fadeInOnScroll);
-            fadeInOnScroll(); // Para ativar os elementos visíveis já no carregamento
-        });
-
-    </script>
+    <script src="js/menu.js"></script><!---->
+    <script src="js/banner.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/faq.js"></script>
 </body>
 
 </html>

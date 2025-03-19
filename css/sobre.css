@@ -1,0 +1,137 @@
+/* Estilo geral */
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.sobre-nos {
+    max-width: 800px;
+    text-align: left;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: -100px;
+    /* Para que o texto fique sobre a imagem */
+    z-index: 2;
+    /* Garantir que o texto fique acima da imagem */
+}
+
+.sobre-nos h3 {
+    text-align: left;
+    font-size: 22px;
+    color: #0e1b3f;
+    margin-bottom: 10px;
+}
+
+.sobre-nos h1 {
+    text-align: left;
+    font-size: 32px;
+    margin-top: 40px;
+    font-weight: 700;
+    color: #0e1b3f;
+    margin-bottom: 20px;
+}
+
+.sobre-nos p {
+    text-align: left;
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.button-chamada a {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #0e1b3f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.button-chamada a:hover {
+    background-color: #0e1b3fc6;
+}
+
+/* Estilo da imagem */
+.sobre img {
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+
+    /* Estilo geral */
+    .sobre {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .sobre-nos {
+        width: 90%;
+        text-align: left;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: -100px;
+        /* Para que o texto fique sobre a imagem */
+        z-index: 2;
+        /* Garantir que o texto fique acima da imagem */
+    }
+
+    .sobre-nos h3 {
+        text-align: left;
+        font-size: 22px;
+        color: #0e1b3f;
+        margin-bottom: 10px;
+    }
+
+    .sobre-nos h1 {
+        text-align: left;
+        font-size: 32px;
+        margin-top: 40px;
+        font-weight: 700;
+        color: #0e1b3f;
+        margin-bottom: 20px;
+    }
+
+    .sobre-nos p {
+        text-align: left;
+        font-size: 16px;
+        color: #7f8c8d;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .button-chamada a {
+        display: inline-block;
+        padding: 10px 50px;
+        background-color: #0e1b3f;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        transition: background-color 0.3s;
+    }
+
+    .button-chamada a:hover {
+        background-color: #0e1b3fc6;
+    }
+
+    /* Estilo da imagem */
+    .sobre img {
+        width: 80%;
+        z-index: 1;
+    }
+}

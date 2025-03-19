@@ -1,0 +1,70 @@
+/* Estilo geral da seção FAQ */
+.faq {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #00003cff;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background-color: #00003cff;
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: rgba(0, 0, 60, 0.833);
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+/* Exibição da resposta quando a pergunta é clicada */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Estilo responsivo para telas pequenas (Mobile) */
+@media (max-width: 767px) {
+    .faq {
+        padding: 15px;
+    }
+
+    .faq h2 {
+        font-size: 24px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+    }
+}
