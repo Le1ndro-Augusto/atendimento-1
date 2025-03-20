@@ -20,5 +20,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Auto-slide a cada 5 segundos
-    setInterval(() => showSlide(index + 1), 5000);
+    setInterval(() => showSlide(index + 1), 10000);
 });
