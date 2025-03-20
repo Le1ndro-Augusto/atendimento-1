@@ -4,202 +4,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central de Atendimento</title>
-
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/banner.css">
-    <link rel="stylesheet" href="css/cards.css">
-    <link rel="stylesheet" href="css/sobre.css">
-    <link rel="stylesheet" href="css/conteudo.css">
-    <link rel="stylesheet" href="css/perguntas.css">
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <title>Área do Cliente</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header class="home">
-        <div class="container">
-            <a href="#" class="logo">Àrea do cliente</a>
-
-            <!-- Ícone do menu mobile -->
-            <div class="menu-icon" id="menu-toggle">
-                <i class="ph ph-list"></i>
-            </div>
-
-            <nav>
-                <ul class="menu" id="menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="https://wa.link/nkqu2x">Contato</a></li>
-                </ul>
-                <a href="https://wa.link/nkqu2x" class="btn-fale">Fale Conosco</a>
-            </nav>
+    <div class="container">
+        <div class="left">
+            <h2>Área do Cliente</h2>
+            <p>Conectando você ao futuro com segurança, inovação e confiança!</p>
         </div>
-    </header>
+        <div class="right">
+            <form id="contactForm">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" required>
+                <div id="nameError" style="color: red; display: none;">Nome inválido! Deve ter no máximo 100 caracteres.</div>
 
-    <section class="banner">
-        <div class="banner-carrousel">
-            <!-- Banner 1 -->
-            <div class="banner-item active one">
-                <div class="desc-banner one-1">
-                    <h2>Conte com nosso atendimento 24 horas, especializado para solucionar seu problema!</h2>
-                    <p>Segurança e praticidade para emissão de 2ª via de boleto e antecipação.</p>
-                    <div class="button-banner one-1-b">
-                        <a href="https://wa.link/nkqu2x">
-                            Clique aqui e comece sua conversa
-                            <i class="ph ph-arrow-line-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Banner 2 -->
-            <div class="banner-item seg">
-                <div class="desc-banner seg-2">
-                    <h2>2ª via de boleto <br> emita sua segunda via de um jeito fácil</h2>
-                    <p>Precisa da segunda via do seu boleto? <br>Agora ficou simples e rápido! Emita sua 2ª via.</p>
-                    <div class="button-banner seg-2-b">
-                        <a href="https://wa.link/nkqu2x">
-                            Solicitar meu atendimento
-                            <i class="ph ph-arrow-line-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                <label for="cpfCnpj">CPF ou CNPJ:</label>
+                <input type="text" id="cpfCnpj" required>
+                <div id="cpfCnpjError" style="color: red; display: none;"></div>
+
+                <label for="reason">Razão</label>
+                <select id="reason" required>
+                    <option value="2a via boleto">2ª Via de Boleto</option>
+                    <option value="parcelas atrasadas">Parcelas Atrasadas</option>
+                    <option value="antecipar parcelas">Antecipar Parcelas</option>
+                    <option value="quitacao financiamento">Quitação de Financiamento</option>
+                    <option value="cartao credito">Cartão de Crédito</option>
+                </select>
+
+                <button type="submit">Entrar em Contato</button>
+            </form>
         </div>
+    </div>
 
-        <!-- Controles do Carrossel -->
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-    </section>
+    <script>
+        function validarCPF(cpf) {
+            cpf = cpf.replace(/[^\d]+/g, '');
+            if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+            let soma = 0, resto;
+            for (let i = 1; i <= 9; i++) soma += parseInt(cpf[i - 1]) * (11 - i);
+            resto = (soma * 10) % 11;
+            if (resto === 10 || resto === 11) resto = 0;
+            if (resto !== parseInt(cpf[9])) return false;
+            soma = 0;
+            for (let i = 1; i <= 10; i++) soma += parseInt(cpf[i - 1]) * (12 - i);
+            resto = (soma * 10) % 11;
+            if (resto === 10 || resto === 11) resto = 0;
+            return resto === parseInt(cpf[10]);
+        }
 
-    <section class="cards" id="home">
-        <div class="cards-banner">
-            <a href="https://wa.link/nkqu2x" class="bloco">
-                2ª via de boleto
-            </a>
-            <a href="https://wa.link/nkqu2x" class="bloco">
-                liquidação antecipada
-            </a>
-            <a href="https://wa.link/nkqu2x" class="bloco">
-                atualizar boleto vencido
-            </a>
-            <a href="https://wa.link/nkqu2x" class="bloco">
-                antecipar parcelas
-            </a>
-            <a href="https://wa.link/nkqu2x" class="bloco">
-                atendimento online
-            </a>
-        </div>
-    </section>
+        function validarCNPJ(cnpj) {
+            cnpj = cnpj.replace(/[^\d]+/g, '');
+            if (cnpj.length !== 14) return false;
+            let tamanho = cnpj.length - 2;
+            let numeros = cnpj.substring(0, tamanho);
+            let digitos = cnpj.substring(tamanho);
+            let soma = 0;
+            let pos = tamanho - 7;
+            for (let i = tamanho; i >= 1; i--) {
+                soma += numeros.charAt(tamanho - i) * pos--;
+                if (pos < 2) pos = 9;
+            }
+            let resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+            if (resultado != digitos.charAt(0)) return false;
+            tamanho = tamanho + 1;
+            numeros = cnpj.substring(0, tamanho);
+            soma = 0;
+            pos = tamanho - 7;
+            for (let i = tamanho; i >= 1; i--) {
+                soma += numeros.charAt(tamanho - i) * pos--;
+                if (pos < 2) pos = 9;
+            }
+            resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+            return resultado == digitos.charAt(1);
+        }
 
-    <section class="sobre">
-        <div class="sobre-nos">
-            <h3>ATENÇÃO</h3>
-            <h1>Pague seu débito ao credor e não ao fraudador. </h1>
-            <p>Apresentamos algumas dicas para que você não caia em golpes de fraude com boletos falsos. Ao suspeitar ou
-                identificar de um e-mail, uma mensagem ou uma página falsa em nome da SF, não clique em links nem abra
-                ou baixe arquivos, e nos avise enviando uma mensagem para:</p>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            let name = document.getElementById("name").value;
+            let cpfCnpj = document.getElementById("cpfCnpj").value.replace(/\D/g, "");
+            let reason = document.getElementById("reason").value;
+            let nameError = document.getElementById("nameError");
+            let cpfCnpjError = document.getElementById("cpfCnpjError");
+            let valid = true;
 
-            <div class="button-chamada">
-                <a href="https://wa.link/nkqu2x">
-                    Inicar atendiemnto ->
-                </a>
-            </div>
-        </div>
-        <img src="img/pessoa-1.png" alt="">
-    </section>
+            // Validação do nome
+            if (name.length === 0 || name.length > 100) {
+                nameError.style.display = "block";
+                valid = false;
+            } else {
+                nameError.style.display = "none";
+            }
 
-    <section class="maer">
-        <section class="conteudo-1 fade-in  ">
-            <div class="desc-conteudo-1">
-                <h2>Soluções na palma <br> da sua mão</h2>
-                <p>Facilite seu dia</p>
-                <p>Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros, que tornem o
-                    dia
-                    a dia do cliente mais fácil e que estejam acessíveis nos momentos e nos canais que o cliente
-                    preferir.
-                </p>
-                <br><br>
-                <a href="https://wa.link/nkqu2x" class="button-conteudo-1">
-                    Solicitar Boleto
-                </a>
-            </div>
-            <div class="img-conteudo-1">
-                <img src="img/bonecos.png" alt="">
-            </div>
-        </section>
-    </section>
+            // Validação do CPF/CNPJ
+            if (cpfCnpj.length === 11) {
+                if (!validarCPF(cpfCnpj)) {
+                    cpfCnpjError.textContent = "CPF inválido!";
+                    cpfCnpjError.style.display = "block";
+                    valid = false;
+                } else {
+                    cpfCnpjError.style.display = "none";
+                }
+            } else if (cpfCnpj.length === 14) {
+                if (!validarCNPJ(cpfCnpj)) {
+                    cpfCnpjError.textContent = "CNPJ inválido!";
+                    cpfCnpjError.style.display = "block";
+                    valid = false;
+                } else {
+                    cpfCnpjError.style.display = "none";
+                }
+            } else {
+                cpfCnpjError.textContent = "CPF deve ter 11 dígitos e CNPJ 14 dígitos.";
+                cpfCnpjError.style.display = "block";
+                valid = false;
+            }
 
-    <section class="feedback-section">
-        <h2>O que nossos clientes dizem</h2>
-        <div class="feedback-container">
-            <div class="feedback-card">
-                <h3>Maria Silva</h3>
-                <p>"Ótimo atendimento! Resolvi meu problema em minutos. Super recomendo!"</p>
-            </div>
-            <div class="feedback-card">
-                <h3>João Santos</h3>
-                <p>"Muito eficiente e fácil de usar. Atendimento excelente!"</p>
-            </div>
-            <div class="feedback-card">
-                <h3>Ana Oliveira</h3>
-                <p>"Serviço rápido e confiável. Sempre utilizo e nunca tive problemas!"</p>
-            </div>
-        </div>
-    </section>
+            if (!valid) {
+                event.preventDefault();
+                return;
+            }
 
-    <section class="faq">
-        <h2>Perguntas Frequentes</h2>
-        <div class="faq-item">
-            <button class="faq-question">O que é a 2ª via de boleto?</button>
-            <div class="faq-answer">
-                <p>A 2ª via de boleto é uma cópia do boleto original que pode ser gerada caso você tenha perdido ou não
-                    tenha recebido o boleto inicial.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">Como posso antecipar parcelas?</button>
-            <div class="faq-answer">
-                <p>A antecipação de parcelas pode ser feita diretamente no nosso portal, basta selecionar a opção
-                    desejada e seguir as instruções para confirmar o pagamento antecipado.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">Quais são as formas de pagamento aceitas?</button>
-            <div class="faq-answer">
-                <p>Aceitamos pagamento via boleto, cartão de crédito e transferência bancária. Escolha a forma mais
-                    conveniente para você.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">Como posso entrar em contato com o suporte?</button>
-            <div class="faq-answer">
-                <p>Você pode entrar em contato conosco pelo chat online. Estamos disponíveis 24 horas para
-                    ajudar.</p>
-            </div>
-        </div>
-    </section>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://wa.link/nkqu2x" style="position:fixed;
-    width:60px;
-    height:60px;
-    bottom:40px;
-    right:40px;
-    background-color:#25d366;color:#FFF;
-    border-radius:50px;
-    text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
-    z-index:1000;" target="_blank">
-        <i style="margin-top:16px" class="fa fa-whatsapp"></i>
-    </a>
-
-    <script src="js/menu.js"></script><!---->
-    <script src="js/banner.js"></script>
-    <script src="js/cards.js"></script>
-    <script src="js/faq.js"></script>
+            // Número do WhatsApp (altere para o seu número real)
+            let whatsappNumber = "5592984215343"; // Exemplo: 55 + DDD + número
+            let message = `Olá, meu nome é ${name}. Meu CPF/CNPJ é ${cpfCnpj} e gostaria de falar sobre: ${reason}.`;
+            let whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, "_blank");
+        });
+    </script>
+    
 </body>
 
 </html>
