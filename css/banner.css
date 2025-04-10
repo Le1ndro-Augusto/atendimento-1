@@ -1,0 +1,328 @@
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+
+    margin-top: 70px;
+}
+
+/* Container do Carrossel */
+.banner-carrousel {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Itens do Carrossel */
+.banner-item {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #0077b6, #00bcd4);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.one {
+    background-image: url("../img/banner-sf-2.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.seg {
+    background-image: url("../img/banner-sf-1.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Texto do Banner */
+.desc-banner h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.desc-banner p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* banner primeiro */
+.one-1-b {
+    padding: 10px 20px;
+    background-color: green;
+    margin-top: 25px;
+    border-radius: 6px;
+    width: 500px;
+}
+
+.one-1-b:hover {
+    background-color: rgba(0, 128, 0, 0.852);
+}
+
+.one-1-b a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.one-1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    text-align: left;
+    margin-left: 100px;
+    width: 750px;
+}
+
+/* banner segundo */
+.seg-2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    text-align: right;
+    margin-right: 100px;
+    width: 100%;
+}
+
+.seg-2-b {
+    display: none;
+}
+
+/* Botões de Navegação */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+
+    /* Banner */
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        overflow: hidden;
+    }
+
+    /* Container do Carrossel */
+    .banner-carrousel {
+        display: flex;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* Itens do Carrossel */
+    .banner-item {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        background: linear-gradient(135deg, #0077b6, #00bcd4);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .one {
+        background-image: url("../img/banner-sf-2.png");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .seg {
+        background-image: url("../img/banner-sf-1.png");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* Texto do Banner */
+
+    .desc-banner h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+
+        margin-top: 20px;
+    }
+
+    .desc-banner p {
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* banner primeiro */
+    .one-1-b {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: green;
+        margin-top: 25px;
+        border-radius: 6px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .one-1-b:hover {
+        background-color: rgba(0, 128, 0, 0.852);
+    }
+
+    .one-1-b a {
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-size: 12px;
+    }
+
+    .one-1 {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* banner segundo */
+    .seg-2 {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* Botões de Navegação */
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.041);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .seg-2-b {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #0e1b3f;
+        color: #fff;
+        margin-top: 25px;
+        border-radius: 6px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .seg-2-b a {
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-size: 12px;
+    }
+}
+
+/* Responsivo */
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+
+    /* Texto do Banner */
+    .desc-banner h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .desc-banner p {
+        font-size: 16px;
+    }
+
+    .one-1 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        text-align: left;
+        margin-left: 100px;
+        width: 400px;
+    }
+
+    /* banner primeiro */
+    .one-1-b {
+        padding: 10px 20px;
+        background-color: green;
+        margin-top: 25px;
+        border-radius: 6px;
+        width: 400px;
+    }
+
+    /* banner segundo */
+    .seg-2 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        text-align: right;
+        margin-right: 100px;
+        width: 100%;
+    }
+
+    .seg-2-b {
+        position: relative;
+        left: 70%;
+        padding: 10px 20px;
+        background-color: green;
+        margin-top: 25px;
+        border-radius: 6px;
+        width: 540px;
+    }
+}

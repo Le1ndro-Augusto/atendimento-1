@@ -1,0 +1,142 @@
+/* Importando fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+/* Estilizando o cabeçalho */
+header {
+    background: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    color: #0e1b3f;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Links do menu */
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #0e1b3f;
+    text-decoration: underline;
+}
+
+/* Botão "Fale Conosco" */
+.btn-fale {
+    background: #0e1b3f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: #fff;
+    transition: background 0.3s;
+}
+
+.btn-fale:hover {
+    background: #0e1b3fd6;
+}
+
+/* Ícone do menu mobile */
+.menu-icon {
+    font-size: 2rem;
+    color: #0e1b3f;
+    cursor: pointer;
+    display: none; /* Oculto no desktop */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0e1b3f;
+        border-bottom: 1px solid ;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        transition: 0.3s;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        color: #fff;
+    }
+
+    .menu li a {
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+    .btn-fale {
+        margin-top: 10px;
+        background-color: green;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* Menu ativo */
+    nav.active {
+        display: flex;
+    }
+}
