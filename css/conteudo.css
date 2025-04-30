@@ -22,7 +22,7 @@
 .desc-conteudo-1 h2 {
     text-align: left;
     font-size: 36px;
-    color: #0e1b3f;
+    color: #ffa500;
     margin-bottom: 10px;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .button-conteudo-1 {
-    background-color: #00003cff;
+    background-color: #ffa500;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -52,7 +52,7 @@
 .feedback-section {
     text-align: center;
     padding: 40px 20px;
-    background-color: #00003cff;
+    background-color: #ffa500;
 
     margin-top: -10%;
 }
@@ -91,7 +91,7 @@
 
 .feedback-card h3 {
     font-size: 1.2rem;
-    color: #007bff;
+    color: #ffa500;
     margin-bottom: 5px;
 }
 
@@ -137,7 +137,7 @@
     .desc-conteudo-1 h2 {
         text-align: left;
         font-size: 32px;
-        color: #0e1b3f;
+        color: #ffa500;
         margin-bottom: 10px;
     }
 
@@ -149,7 +149,7 @@
 
 
     .button-conteudo-1 {
-        background-color: #00003cff;
+        background-color: #ffa500;
         color: #fff;
         text-decoration: none;
         font-weight: 600;

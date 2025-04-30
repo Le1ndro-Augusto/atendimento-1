@@ -29,14 +29,16 @@
 }
 
 .one {
-    background-image: url("../img/banner-sf-2.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url("../img/header2.webp") no-repeat top center / cover;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .seg {
-    background-image: url("../img/banner-sf-1.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url("../img/header3.webp") no-repeat top center / cover;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,14 +59,14 @@
 /* banner primeiro */
 .one-1-b {
     padding: 10px 20px;
-    background-color: green;
+    background-color: #ffa500;
     margin-top: 25px;
     border-radius: 6px;
     width: 500px;
 }
 
 .one-1-b:hover {
-    background-color: rgba(0, 128, 0, 0.852);
+    background-color: #ffa600d8;
 }
 
 .one-1-b a {
@@ -79,7 +81,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-
     text-align: left;
     margin-left: 100px;
     width: 750px;
@@ -98,6 +99,8 @@
 
 .seg-2-b {
     display: none;
+
+    background-color: #ffa500;
 }
 
 /* Botões de Navegação */
@@ -160,14 +163,16 @@
     }
 
     .one {
-        background-image: url("../img/banner-sf-2.png");
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url("../img/header2.webp") no-repeat right center / cover;
         background-position: left;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     .seg {
-        background-image: url("../img/banner-sf-1.png");
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url("../img/header3.webp") no-repeat top center / cover;
         background-position: right;
         background-repeat: no-repeat;
         background-size: cover;
@@ -197,7 +202,7 @@
         justify-content: center;
         align-items: center;
         padding: 10px 20px;
-        background-color: green;
+        background-color: #ffa500;
         margin-top: 25px;
         border-radius: 6px;
         width: 100%;
@@ -205,7 +210,7 @@
     }
 
     .one-1-b:hover {
-        background-color: rgba(0, 128, 0, 0.852);
+        background-color: #ffa500;
     }
 
     .one-1-b a {
@@ -299,7 +304,7 @@
     /* banner primeiro */
     .one-1-b {
         padding: 10px 20px;
-        background-color: green;
+        background-color: #ffa500;
         margin-top: 25px;
         border-radius: 6px;
         width: 400px;

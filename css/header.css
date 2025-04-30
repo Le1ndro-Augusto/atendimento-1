@@ -35,7 +35,7 @@ header {
 
 /* Logo */
 .logo {
-    color: #0e1b3f;
+    color: #ffa500;
     font-size: 1.8rem;
     font-weight: 600;
     text-decoration: none;
@@ -59,20 +59,20 @@ nav {
 
 .menu li a {
     text-decoration: none;
-    color: #000;
+    color: #ffa500;
     font-size: 1rem;
     font-weight: 400;
     transition: color 0.3s;
 }
 
 .menu li a:hover {
-    color: #0e1b3f;
+    color: #70592e;
     text-decoration: underline;
 }
 
 /* Botão "Fale Conosco" */
 .btn-fale {
-    background: #0e1b3f;
+    background: #ffa500;
     color: white;
     padding: 10px 15px;
     border-radius: 6px;
@@ -101,7 +101,7 @@ nav {
         top: 70px;
         left: 0;
         width: 100%;
-        background: #0e1b3f;
+        background: #ffa500;
         border-bottom: 1px solid ;
         display: none;
         flex-direction: column;
@@ -128,7 +128,7 @@ nav {
 
     .btn-fale {
         margin-top: 10px;
-        background-color: green;
+        background-color: #ac7b21;
     }
 
     .menu-icon {
