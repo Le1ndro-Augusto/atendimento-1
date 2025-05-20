@@ -30,17 +30,23 @@
 
 .one {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-    url("../img/header2.webp") no-repeat top center / cover;
+    url("../img/banner-1atendimento.png");
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: cover;
+
+    background-position: center;
     background-size: cover;
 }
 
 .seg {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-    url("../img/header3.webp") no-repeat top center / cover;
+    url("../img/banner-atendiemento1.png") no-repeat top center / cover;
     background-position: top;
     background-repeat: no-repeat;
+    background-size: cover;
+
+    background-position: center;
     background-size: cover;
 }
 
@@ -59,14 +65,14 @@
 /* banner primeiro */
 .one-1-b {
     padding: 10px 20px;
-    background-color: #ffa500;
+    background-color: rgb(7, 7, 124);
     margin-top: 25px;
     border-radius: 6px;
     width: 500px;
 }
 
 .one-1-b:hover {
-    background-color: #ffa600d8;
+    background-color: rgb(7, 7, 124);
 }
 
 .one-1-b a {
@@ -100,7 +106,7 @@
 .seg-2-b {
     display: none;
 
-    background-color: #ffa500;
+    background-color: rgb(7, 7, 124);
 }
 
 /* Botões de Navegação */
@@ -138,7 +144,7 @@
     .banner {
         position: relative;
         width: 100%;
-        height: 70vh;
+        height: 80vh;
         overflow: hidden;
     }
 
@@ -164,18 +170,22 @@
 
     .one {
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-        url("../img/header2.webp") no-repeat right center / cover;
+        url("../img/banner-1atendimento.png") no-repeat right center / cover;
         background-position: left;
         background-repeat: no-repeat;
         background-size: cover;
+
+        background-position: center;
     }
 
     .seg {
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-        url("../img/header3.webp") no-repeat top center / cover;
+        url("../img/banner-atendiemento1.png") no-repeat top center / cover;
         background-position: right;
         background-repeat: no-repeat;
         background-size: cover;
+
+        background-position: center;
     }
 
     /* Texto do Banner */
@@ -202,7 +212,7 @@
         justify-content: center;
         align-items: center;
         padding: 10px 20px;
-        background-color: #ffa500;
+        background-color: rgb(7, 7, 124);
         margin-top: 25px;
         border-radius: 6px;
         width: 100%;
@@ -210,7 +220,7 @@
     }
 
     .one-1-b:hover {
-        background-color: #ffa500;
+        background-color: rgb(7, 7, 124);
     }
 
     .one-1-b a {
@@ -304,7 +314,7 @@
     /* banner primeiro */
     .one-1-b {
         padding: 10px 20px;
-        background-color: #ffa500;
+        background-color: rgb(7, 7, 124);
         margin-top: 25px;
         border-radius: 6px;
         width: 400px;

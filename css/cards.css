@@ -18,7 +18,7 @@
 }
 
 .bloco {
-    background-color: #ffa500;
+    background-color: rgb(7, 7, 124);
     text-decoration: none;
     padding: 20px;
     border-radius: 6px;
@@ -31,11 +31,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.bloco:hover {
-    transform: scale(1.10);
-    transition: .1s;
 }
 
 /* Estilos específicos para mobile */
@@ -53,7 +48,4 @@
         align-items: center;
     }
 
-    .bloco:hover {
-        display: none;
-    }
 }
