@@ -1,0 +1,99 @@
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 40px 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: none;
+    margin: 4px 0;
+    display: block;
+}
+
+.footer-column a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-logo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-logo i {
+    font-size: 47px;
+}
+
+.footer-cnpj {
+    text-align: center;
+    background-color: #111;
+    padding: 10px;
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 20px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+}
+
+section.txt {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+  }
+
+  section.txt h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffa500; /* Azul escuro institucional */
+    border-left: 6px solid #ffa500;
+    padding-left: 12px;
+  }
+
+  section.txt p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    section.txt {
+      margin: 20px;
+      padding: 20px;
+    }
+
+    section.txt h2 {
+      font-size: 1.6em;
+    }
+
+    section.txt p {
+      font-size: 1em;
+    }
+  }
