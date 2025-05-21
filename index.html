@@ -1,204 +1,138 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atendimento</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>Vip Autos</title>
+    <!-- Link do Bootstrap CSS -->
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.png">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script src="links.js"></script>
 </head>
 
 <body>
-    <header>
-        <h3 class="logo">Logo</h3>
-
-        <!-- Botão hamburguer -->
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- Menu de navegação -->
-        <ul class="categorias" id="categorias">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </header>
-
-
-    <section class="banner">
-        <div class="des-banner">
-            <br><br><br>
-            <h2>
-                Marketing<br>
-                Promocional de<br>
-                Sucesso
-            </h2>
-            <p>Oferecemos soluções criativas para impulsionar suas vendas.</p>
-        </div>
-        <div class="button">
-            <a href="#" class="button">Saiba Mais</a>
-        </div>
-        <div class="card-banner">
-            <div class="cars">
-                <div class="bloco-banner">
-                    <h3>Promoções em Vendas</h3>
-                    <p>Aumente suas vendas com promoções eficazes.</p>
-                </div>
-                <div class="bloco-banner">
-                    <h3>Promoções em Vendas</h3>
-                    <p>Aumente suas vendas com promoções eficazes.</p>
-                </div>
-                <div class="bloco-banner">
-                    <h3>Promoções em Vendas</h3>
-                    <p>Aumente suas vendas com promoções eficazes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container-sobre">
-        <div class="cont-sobre">
-            <div class="desc-sobre">
-                <h2>Sobre a Telepost<br>Marketing</h2>
-                <p>
-                    Desde 1996, a Telepost Marketing Promoções e Incentivo Ltda se destaca no marketing promocional,
-                    oferecendo soluções criativas e eficazes para impulsionar vendas e engajar consumidores.
-                </p>
-
-                <div class="close">
-                    <div class="cloese-1">
-                        <span class="number">150+</span>
-                        <p>Clientes satisfeitos</p>
-                    </div>
-                    <div class="cloese-1">
-                        <span class="number">15</span>
-                        <p>Mais de 25 anos</p>
+    <section id="home">
+        <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagens/banner.webp" class="d-block w-100" alt="Banner 1">
+                    <div class="carousel-caption d-md-block">
+                        <h1>Bem Vindo(a)</h1>
+                        <a href="https://wa.me/5511965024741?text=Ol%C3%A1%20gostaria%20de%20atendimento!" target="_blank" class="btnBanner">REALIZAR ATENDIMENTO</a>
                     </div>
                 </div>
-            </div>
 
-            <div class="imagem-sobre">
-                <img src="img/img-close.avif" alt="Imagem institucional">
             </div>
+            <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </section>
 
-    <section class="service">
-        <h2>Serviços Promocionais</h2>
-        <p class="subtitulo-servico">
-            Oferecemos soluções em marketing promocional para impulsionar suas vendas e engajar seu público-alvo.
-        </p>
-
-        <div class="servicos-container">
-            <div class="service-1">
-                <img src="img/service-img.avif" alt="Material Publicitário">
-                <div class="desc-service-1">
-                    <h3>Material Publicitário</h3>
-                    <p>
-                        Distribuímos materiais publicitários de forma eficaz<br>
-                        para maximizar o alcance da sua marca.
-                    </p>
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="imagens/img-perguntas.webp" alt="Sobre" class="w-100"> 
                 </div>
-            </div>
-
-            <div class="service-1">
-                <img src="img/service-img2.avif" alt="Promoções Vendas">
-                <div class="desc-service-1">
-                    <h3>Promoções Vendas</h3>
-                    <p>
-                        Criamos e gerenciamos promoções em pontos de<br>
-                        venda para aumentar a visibilidade e vendas.
-                    </p>
+                <div class="col-md-6">
+                    <h2 class="mt-15 text-center">Sobre Nós</h2>
+                    <p class="text-center">Bem-vindo ao nosso atendimento virtual! Atuamos em parceria com as principais instituições financeiras do Brasil para oferecer um suporte rápido e eficiente.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container">
-        <div class="main-photo">
-            <img src="img/img-1.avif" alt="Estande principal">
+    <!-- Seção Serviços -->
+    <section id="servicos">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <h2>Precisa de ajuda?</h2>
+                    <p>Fale conosco agora mesmo e emita sua 2º via.</p>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://wa.me/5511965024741?text=Ol%C3%A1%20gostaria%20de%20atendimento!" class="btn" target="_blank">FALE CONOSCO</a>
+                </div>
+            </div>
         </div>
-
-        <div class="gallery">
-            <img src="img/photo-1560884124-6ad1e0cdf737.avif" alt="Thumb 1">
-            <img src="img/photo-1643623717051-d97494178273.avif" alt="Thumb 2">
-            <img src="img/photo-1674027392842-29f8354e236c.avif" alt="Thumb 3">
-            <img src="img/photo-1689527612745-a90ea8805008.avif" alt="Thumb 4">
-            <img src="img/photo-1696041757866-f19a8e46fab1.avif" alt="Thumb 5">
-        </div>
-    </div>
-
-    <section class="feed">
-        <h3>★★★★★</h3>
-        <p>
-            A Telepost transformou nossas vendas com suas promoções eficazes e materiais publicitários de alta
-            qualidade.
-            Recomendo seus serviços a todos que buscam resultados!
-        </p>
-
-        <img src="img/joao-silva.jpg" alt="João Silva">
-        <p class="nome-cliente">João Silva</p>
     </section>
 
-    <footer class="rodape">
-        <div class="container-rodape">
-            <div class="coluna">
-                <h4>Contato</h4>
-                <p>Entre em contato para mais informações sobre serviços.</p>
-                <br>
-                <a style="margin-top: 20px; color: #fff; text-decoration: none;" href="politicas.html">Política
-                    Privacidade</a>
+    <section id="quem-somos">
+       <div class="container">
+        <h2 class="text-center">Nossos Serviços</h2>
+        <p class="text-center">Atendimento 100% Online: Comodidade e Agilidade ao Seu Alcance!</p>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="nov">
+                    <h3 class="text-center bold mt-3">Segunda Via de Boleto</h3>
+                    <p class="text-center">Solicite, agora, atualizando a data do vencimento de seu boleto.</p>
+                    <p class="text-center"><a href="https://wa.me/5511965024741?text=Ol%C3%A1%20gostaria%20de%20atendimento!" target="_blank" class="btnBox">EMITIR 2º VIA</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="nov">
+                    <h3 class="text-center bold mt-3">Parcelas em Atraso</h3>
+                    <p class="text-center">Oferecemos as melhores condições para você renegociar seu débito</p>
+                    <p class="text-center"><a href="https://wa.me/5511965024741?text=Ol%C3%A1%20gostaria%20de%20atendimento!" target="_blank" class="btnBox">RENEGOCIAR</a></p>
+                </div>
             </div>
 
-            <div class="coluna">
-                <h4>Serviços</h4>
-                <p>(11) 3040-8406</p>
-                <p>(11) 3040-8401</p>
-                <p>adsystem.fiscal@terra.com.br</p>
-            </div>
-
-            <div class="coluna">
-                <h4>Sobre</h4>
-                <label for="email">Seu e-mail para contato</label>
-                <input type="email" id="email" placeholder="Digite seu e-mail aqui">
-                <button>Enviar solicitação de contato</button>
+            <div class="col-md-4">
+                <div class="nov">
+                    <h3 class="text-center bold mt-3">Antecipar Parcelas</h3>
+                    <p class="text-center">Reduzimos os juros no pagamento antecipado de suas parcelas.</p>
+                    <p class="text-center"><a href="https://wa.me/5511965024741?text=Ol%C3%A1%20gostaria%20de%20atendimento!" target="_blank" class="btnBox">ANTECIPAR</a></p>
+                </div>
             </div>
         </div>
+       </div>
+    </section>
 
-        <div class="copy">
-            <p><strong>Telepost Marketing Promocoes e Incentivo LTDA</strong></p>
-            <p>CNPJ: 01.562.184/0001-46</p>
-            <p>Inscrição Estadual (SP): 115.301.252.117</p>
-            <p>Data de Abertura: 21/11/1996 — 28 anos, 5 meses e 24 dias</p>
-            <p>Porte: Sem Enquadramento | Capital Social: R$ 200.000,00</p>
-            <p>Natureza Jurídica: Sociedade Empresária Limitada</p>
-            <p>Opção pelo MEI: Não | Simples Nacional: Não</p>
-            <p>Situação Cadastral: Ativa desde 03/11/2005</p>
-            <p>Endereço: Rua Siqueira Bueno, 1350 - Belenzinho, São Paulo - SP, CEP 03173-010</p>
-            <p>E-mail: adsystem.fiscal@terra.com.br | Telefones: (11) 3040-8406 / (11) 3040-8401</p>
-            <p><strong>Atividade Principal:</strong> Comércio varejista de cosméticos, produtos de perfumaria e de
-                higiene pessoal (CNAE 47.72-5-00)</p>
-            <p><strong>Atividades Secundárias:</strong> Consultoria em publicidade, Agências de publicidade, Marketing
-                direto, Comércio atacadista e varejista de cosméticos, produtos alimentícios e de higiene pessoal,
-                Intermediação de serviços em geral.</p>
-            <p><strong>Sócios:</strong> Kamor S.A. (Uruguai), Moema Paes de Almeida Braga, Paulo Jose Ferreira Braga</p>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="py-5">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6">
+                <img src="imagens/img-ay.webp" alt="Somos" class="w-100">
+            </div>
+            <div class="col-md-6 mt-3">
+                <h2>Dúvidas sobre como pagar seu boleto de quitação?</h2>
+                <p>Pagar seu boleto é simples! Confira as opções:</p>
+                <p><strong> Banking ou App Bancário:</strong>  Pague direto pelo aplicativo do seu banco.</p>
+                <p><strong>Conta Digital:</strong>  Utilize sua conta digital para efetuar o pagamento.</p>
+                <p><strong>Agências Bancárias:</strong>  Procure a agência do seu banco.</p>
+                <p><strong>Casas Lotéricas:</strong>  Verifique a possibilidade de pagamento em lotéricas, conforme o valor.</p>
+
+                <p>Como baixar o boleto?</p>
+                <p>Após fechar um acordo, o boleto será enviado por e-mail (PDF) ou SMS (código de barras).Você também pode acessar o site da QueroQuitar, fazer login, localizar o acordo em “Detalhes do Acordo” e baixar o boleto ou copiar o código de barras para pagamento.</p>
+
+            </div>
         </div>
-    </footer>
+        </div>
+    </section>
 
-    <script>
-        const toggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('categorias');
+    
+    <a href="https://wa.me/5511965024741?text=Ol%C3%A1%20gostaria%20de%20atendimento!" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-        toggle.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
-
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

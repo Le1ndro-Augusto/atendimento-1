@@ -1,0 +1,383 @@
+/* Reseta o estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Ativa a rolagem suave */
+}
+
+.texto a{
+    margin-top: 10px;
+    display: block;
+    color: #141f30;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+a{
+    color: #141f30;
+    text-decoration: none !important;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: "Manrope", sans-serif;
+    color: #141f30;
+    line-height: 1.6;
+}
+
+h1, h2, h3{
+    font-weight: 700 !important;
+}
+
+/* CabeÃ§alho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#bannerCarousel {
+    margin-top: -8vh;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo escuro com 50% de opacidade */
+    z-index: 1;
+}
+
+.carousel-item img {
+    position: relative;
+    z-index: 0;
+    height: 600px;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.carousel-caption{
+    bottom: 25vh !important;
+}
+
+.btnBanner{
+    background-color:red;
+    font-size: 20px;
+    font-weight: 600;
+    border-width: 1px;
+    border-radius: 100px;
+    border-color: #0000004D;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.btnBanner:hover{
+    color: #fff;
+    transition: 2.5s;
+}
+
+.mt-15{
+    margin-top: 15vh;
+}
+
+#servicos, #contato{
+    background: red;
+    color: #fff;
+}
+
+.btn{
+    background: red;
+    padding: 13px 26px;
+    color: #fff;
+}
+
+#servicos h2{
+    color: #fff;
+}
+/* SeÃ§Ã£o principal */
+#home {
+    padding: 3rem 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+#home .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn2 {
+    background-color: #141F30;
+    box-shadow: 5px 4px 3px 0px rgba(0, 0, 0, 0.5);
+    padding: 19px 66px 19px 80px;
+    color: #fff;
+    font-size: 15px !important;
+    border: none;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+/* SeÃ§Ãµes */
+section {
+    padding: 2rem 0;
+}
+
+section .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.servico-item {
+    margin-bottom: 1rem;
+}
+
+/* FormulÃ¡rio de contato */
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+form button {
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+.box {
+    background: #fff;
+    box-shadow: 5px 4px 3px 0px rgba(0, 0, 0, 0.5);
+    height: 195px;
+    border-radius: 5% 15%;
+    padding: 41px 0px;
+    margin: 10px;
+}
+
+.box h3 {
+    font-size: 15px;
+    text-align: center;
+}
+
+.box img {
+    margin: 10px auto;
+    display: block;
+}
+
+/* RodapÃ© */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.valores .card {
+    background-color: #1b2330 !important;
+    /* Fundo escuro */
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.valores .numero {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.valores h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.valores .linha {
+    width: 50px;
+    border-top: 1px solid #ccc;
+    margin: 10px auto;
+}
+
+.valores p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.quemSomos {
+    display: flex;
+    justify-items: left;
+}
+
+.jt img {
+    width: 100%;
+}
+
+.conteudo {
+    margin-left: 8vh;
+    width: 50%;
+}
+
+.form1 {
+    width: 50%;
+    margin-left: 4vh;
+}
+
+.form-control {
+    width: 90% !important;
+}
+
+.jt {
+    width: 50%;
+}
+
+.nov img {
+    margin: 0 auto;
+    display: block;
+    width: 56px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+.whatsapp-button i {
+    font-size: 30px;
+}
+
+.nov{
+    background: #F8F8F8;
+    padding: 10px;
+    height: 227px;
+}
+
+.nov h3{
+    font-size: 21px;
+    margin-top: 26px !important;
+}
+
+.btnBox{
+    background-color: red;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 5px 20px;
+    color: #fff;
+}
+
+.btnBox:hover{
+    color: #fff;
+}
+.footer {
+    background-color: #1b2330;
+    /* Cor de fundo escura */
+}
+
+.footer p,
+.footer a {
+    color: #ddd;
+    font-size: 14px;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer .privacy-policy {
+    font-weight: bold;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 5px;
+}
+
+.footer i {
+    margin-right: 8px;
+}
+
+
+@media (max-width: 767px) {
+    .quemSomos {
+        display: inline-block;
+    }
+
+    .jt{
+    width: 100%;
+}
+
+    .form1{
+    width: 90%;
+}
+    .conteudo{
+    width: 88%;
+    margin: 20px;
+}
+
+.carousel-caption{
+    bottom: 29vh !important;
+    left: 8%;
+}
+
+}
